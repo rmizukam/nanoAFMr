@@ -77,7 +77,8 @@ AFM.hhcf <- function(obj, no=1,
                      xi.percentage = 70,
                      randomSeed = NA,
                      allResults = FALSE,
-                     verbose=FALSE) {
+                     verbose=FALSE,
+                     ...) {
   r.nm <- myLabel <- NULL
   results = list()  # keeps track of all results
 
@@ -185,7 +186,8 @@ AFM.hhcf <- function(obj, no=1,
     geom_label(data = dFitLabels,
                aes(fill = 'white',label=myLabel),
                colour = "white",
-               fontface = "bold", hjust=-0.1) +
+               fontface = "bold", hjust=-0.1,
+               ...) +
     theme(legend.position = 'none')
 
   results$graph = g
